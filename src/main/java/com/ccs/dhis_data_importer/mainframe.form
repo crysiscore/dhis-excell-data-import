@@ -1,0 +1,338 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<Form version="1.3" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JFrameFormInfo">
+  <Properties>
+    <Property name="defaultCloseOperation" type="int" value="3"/>
+  </Properties>
+  <SyntheticProperties>
+    <SyntheticProperty name="formSizePolicy" type="int" value="1"/>
+    <SyntheticProperty name="generateCenter" type="boolean" value="false"/>
+  </SyntheticProperties>
+  <AuxValues>
+    <AuxValue name="FormSettings_autoResourcing" type="java.lang.Integer" value="0"/>
+    <AuxValue name="FormSettings_autoSetComponentName" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_generateFQN" type="java.lang.Boolean" value="true"/>
+    <AuxValue name="FormSettings_generateMnemonicsCode" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_i18nAutoMode" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_layoutCodeTarget" type="java.lang.Integer" value="1"/>
+    <AuxValue name="FormSettings_listenerGenerationStyle" type="java.lang.Integer" value="0"/>
+    <AuxValue name="FormSettings_variablesLocal" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_variablesModifier" type="java.lang.Integer" value="2"/>
+  </AuxValues>
+
+  <Layout>
+    <DimensionLayout dim="0">
+      <Group type="103" groupAlignment="0" attributes="0">
+          <Component id="jPanel1" min="-2" max="-2" attributes="0"/>
+      </Group>
+    </DimensionLayout>
+    <DimensionLayout dim="1">
+      <Group type="103" groupAlignment="0" attributes="0">
+          <Group type="102" alignment="0" attributes="0">
+              <Component id="jPanel1" min="-2" max="-2" attributes="0"/>
+              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+          </Group>
+      </Group>
+    </DimensionLayout>
+  </Layout>
+  <SubComponents>
+    <Container class="javax.swing.JPanel" name="jPanel1">
+
+      <Layout>
+        <DimensionLayout dim="0">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" alignment="0" attributes="0">
+                  <Group type="103" groupAlignment="1" attributes="0">
+                      <Component id="btn_import" min="-2" pref="91" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                          <Group type="102" alignment="0" attributes="0">
+                              <Group type="103" groupAlignment="1" attributes="0">
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <EmptySpace min="-2" pref="48" max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Component id="jLabel6" alignment="1" min="-2" max="-2" attributes="0"/>
+                                          <Component id="jLabel7" alignment="1" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                  </Group>
+                                  <Group type="102" attributes="0">
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="1" attributes="0">
+                                          <Component id="jLabel4" alignment="1" min="-2" pref="90" max="-2" attributes="0"/>
+                                          <Component id="jLabel1" alignment="1" min="-2" max="-2" attributes="0"/>
+                                          <Component id="jLabel5" alignment="1" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                  </Group>
+                              </Group>
+                              <EmptySpace min="-2" pref="57" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                  <Component id="cmb_unidade_sanitaria" alignment="1" pref="327" max="32767" attributes="0"/>
+                                  <Component id="cmb_distritos" alignment="1" max="32767" attributes="0"/>
+                                  <Component id="cmb_periodo" min="-2" max="-2" attributes="0"/>
+                                  <Component id="cmb_formulario" min="-2" max="-2" attributes="0"/>
+                                  <Component id="cmb_override" alignment="0" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <EmptySpace min="-2" pref="48" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="jScrollPane1" max="32767" attributes="0"/>
+                                  <Group type="102" attributes="0">
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
+                                          <Component id="lbl_password" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                      <EmptySpace min="-2" pref="57" max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Component id="txt_username" max="32767" attributes="0"/>
+                                          <Component id="txt_password" max="32767" attributes="0"/>
+                                      </Group>
+                                  </Group>
+                              </Group>
+                          </Group>
+                          <Group type="102" alignment="1" attributes="0">
+                              <EmptySpace min="-2" pref="58" max="-2" attributes="0"/>
+                              <Component id="lbl_file_location" min="-2" pref="190" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="bnt_load_file" min="-2" pref="234" max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
+                  </Group>
+                  <EmptySpace pref="76" max="32767" attributes="0"/>
+              </Group>
+          </Group>
+        </DimensionLayout>
+        <DimensionLayout dim="1">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace min="-2" pref="28" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="bnt_load_file" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="lbl_file_location" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="cmb_distritos" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jLabel1" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="cmb_unidade_sanitaria" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jLabel4" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="cmb_periodo" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jLabel5" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="jLabel6" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="cmb_formulario" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="jLabel7" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="cmb_override" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="jLabel2" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="txt_username" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="lbl_password" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="txt_password" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace min="-2" pref="35" max="-2" attributes="0"/>
+                  <Component id="jScrollPane1" min="-2" pref="219" max="-2" attributes="0"/>
+                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                  <Component id="btn_import" pref="27" max="32767" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+              </Group>
+          </Group>
+        </DimensionLayout>
+      </Layout>
+      <SubComponents>
+        <Component class="javax.swing.JButton" name="bnt_load_file">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Carregar ficheiro"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="bnt_load_fileActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JLabel" name="lbl_file_location">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Ficheiro:"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="jLabel1">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Distrito:"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JComboBox" name="cmb_distritos">
+          <Properties>
+            <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+              <StringArray count="7">
+                <StringItem index="0" value="Kamaxakeni"/>
+                <StringItem index="1" value="Kampfumu"/>
+                <StringItem index="2" value="Kamubukwana"/>
+                <StringItem index="3" value="Kanyaka"/>
+                <StringItem index="4" value="Katembe"/>
+                <StringItem index="5" value="Nlhamankulu"/>
+                <StringItem index="6" value="Kamavota"/>
+              </StringArray>
+            </Property>
+          </Properties>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
+          </AuxValues>
+        </Component>
+        <Component class="javax.swing.JTextField" name="txt_username">
+        </Component>
+        <Component class="javax.swing.JLabel" name="jLabel2">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Username:"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="lbl_password">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Password:"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="jLabel4">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Unidade Sanitaria:"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JComboBox" name="cmb_unidade_sanitaria">
+          <Properties>
+            <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+              <StringArray count="31">
+                <StringItem index="0" value="1_de_junho_cs"/>
+                <StringItem index="1" value="albasine_cs"/>
+                <StringItem index="2" value="hulene_psa"/>
+                <StringItem index="3" value="mavalane_cs"/>
+                <StringItem index="4" value="mavalane_hg"/>
+                <StringItem index="5" value="pescadores_ps"/>
+                <StringItem index="6" value="romao_psa 1_de_maio_cs   "/>
+                <StringItem index="7" value="polana_canico_cs"/>
+                <StringItem index="8" value="1_alto_mae_csurb"/>
+                <StringItem index="9" value="hospital_central_de_mapito_hc"/>
+                <StringItem index="10" value="hospital_central_pediatrico_de_maputo_hc"/>
+                <StringItem index="11" value="malhangalene_cs"/>
+                <StringItem index="12" value="maxaquene_csurb"/>
+                <StringItem index="13" value="Hospital_militar_de_maputo"/>
+                <StringItem index="14" value="polana_cimento_csurb"/>
+                <StringItem index="15" value="porto_csurb"/>
+                <StringItem index="16" value="bagamoio_cs"/>
+                <StringItem index="17" value="hospital_psiquiatrico_do_infulene_cs"/>
+                <StringItem index="18" value="inhagoia_ps   "/>
+                <StringItem index="19" value="magoanine_tenda_psa"/>
+                <StringItem index="20" value="zimpeto_ps"/>
+                <StringItem index="21" value="inhaca_ps"/>
+                <StringItem index="22" value="catembe_cs"/>
+                <StringItem index="23" value="chamissava_cs"/>
+                <StringItem index="24" value="incassane_cs"/>
+                <StringItem index="25" value="mutsekwa_ps"/>
+                <StringItem index="26" value="centro_de_saude_do_chamanculo_cs   "/>
+                <StringItem index="27" value="chamanculo_hg"/>
+                <StringItem index="28" value="jose_macamo_cs"/>
+                <StringItem index="29" value="jose_macamo_HG"/>
+                <StringItem index="30" value="xipamanine_csurb"/>
+              </StringArray>
+            </Property>
+          </Properties>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
+          </AuxValues>
+        </Component>
+        <Component class="javax.swing.JLabel" name="jLabel5">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Periodo: "/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JComboBox" name="cmb_periodo">
+          <Properties>
+            <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+              <StringArray count="11">
+                <StringItem index="0" value="Novembro 2020"/>
+                <StringItem index="1" value="Dezembro 2020"/>
+                <StringItem index="2" value="Janeiro 2021"/>
+                <StringItem index="3" value="Fevereiro 2021"/>
+                <StringItem index="4" value="Mar&#xe7;o 2021"/>
+                <StringItem index="5" value="Abril 2021"/>
+                <StringItem index="6" value="Maio 2021"/>
+                <StringItem index="7" value="Junho 2021"/>
+                <StringItem index="8" value="Julho 2021"/>
+                <StringItem index="9" value="Agosto 2021"/>
+                <StringItem index="10" value="Setembro 2021"/>
+              </StringArray>
+            </Property>
+          </Properties>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
+          </AuxValues>
+        </Component>
+        <Component class="javax.swing.JLabel" name="jLabel6">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Formulario:"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JComboBox" name="cmb_formulario">
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="cmb_formularioActionPerformed"/>
+          </Events>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
+          </AuxValues>
+        </Component>
+        <Component class="javax.swing.JLabel" name="jLabel7">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Override:"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JComboBox" name="cmb_override">
+          <Properties>
+            <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+              <StringArray count="2">
+                <StringItem index="0" value="Nao"/>
+                <StringItem index="1" value="Sim"/>
+              </StringArray>
+            </Property>
+          </Properties>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
+          </AuxValues>
+        </Component>
+        <Component class="javax.swing.JButton" name="btn_import">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Importar"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn_importActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JPasswordField" name="txt_password">
+        </Component>
+        <Container class="javax.swing.JScrollPane" name="jScrollPane1">
+          <AuxValues>
+            <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
+          </AuxValues>
+
+          <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
+          <SubComponents>
+            <Component class="javax.swing.JTextArea" name="txt_logs">
+              <Properties>
+                <Property name="columns" type="int" value="20"/>
+                <Property name="rows" type="int" value="5"/>
+              </Properties>
+            </Component>
+          </SubComponents>
+        </Container>
+      </SubComponents>
+    </Container>
+  </SubComponents>
+</Form>
