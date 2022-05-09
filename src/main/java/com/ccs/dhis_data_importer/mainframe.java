@@ -23,8 +23,12 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.PrintStream;
+import java.time.Period;
 import java.util.ArrayList;
 import java.util.List;
+import javax.swing.ComboBoxModel;
+import javax.swing.DefaultComboBoxModel;
+import javax.swing.JComboBox;
 
 
 /**
@@ -46,6 +50,7 @@ public class mainframe extends javax.swing.JFrame {
    Helper help;
    String filePath= "C:\\py-dhis-data-entry\\config\\extra_config.py";
    List <String> formNames ;
+   List <String> periodNames;
    
     public mainframe() {
         
@@ -54,24 +59,51 @@ public class mainframe extends javax.swing.JFrame {
  
         rwTextFile = new ReadWriteTextFile();
         logs = new ArrayList<>();
-                PrintStream printStream = new PrintStream(new CustomOutputStream(txt_logs));
+        PrintStream printStream = new PrintStream(new CustomOutputStream(txt_logs));
         System.setOut(printStream);
         System.setErr(printStream);
-         if( help.CheckFileExists(filePath)){
-            try {
-                formNames = help.GetFormNames(filePath);
-                for(String form : formNames){
-                 cmb_formulario.addItem(form);
-                }
-            } catch ( IOException e) {
-                System.out.println("Erro ao ler as configuracoes extras:" + e.getMessage());
-            }
-            
-        }
+         AutoCompletion.enable(cmb_unidade_sanitaria);
+        FillFormCombo();
+        FillPeriodCombo();
        
        
     }
-
+    
+     private void FillPeriodCombo (){
+        
+           if( help.CheckFileExists(filePath)){
+                   try {
+               periodNames =Helper.GetPeriods(filePath);
+               cmb_periodo.setModel(new DefaultComboBoxModel(periodNames.toArray()));
+               AutoCompletion.enable(cmb_periodo);
+      } catch ( IOException e) {
+                System.out.println("Erro ao ler as configuracoes extras: verifique se existe o ficheiro C:\\py-dhis-data-entry\\config\\extra_config.py " + e.getMessage());
+            }
+        } else {
+               
+                     System.out.println("Erro ao ler as configuracoes extras: verifique se existe o ficheiro C:\\py-dhis-data-entry\\config\\extra_config.py ");
+               
+           }
+    }
+     private void FillFormCombo (){
+        
+           if( help.CheckFileExists(filePath)){
+            try {
+                formNames = Helper.GetFormNames(filePath);
+                cmb_formulario.setModel(new DefaultComboBoxModel(formNames.toArray()));
+                 AutoCompletion.enable(cmb_formulario);
+            } catch ( IOException e) {
+                System.out.println("Erro ao ler as configuracoes extras: verifique se existe o ficheiro C:\\py-dhis-data-entry\\config\\extra_config.py " + e.getMessage());
+            }
+            
+        } else {
+               
+                     System.out.println("Erro ao ler as configuracoes extras: verifique se existe o ficheiro C:\\py-dhis-data-entry\\config\\extra_config.py ");
+               
+           }
+    }
+     
+ 
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -123,11 +155,9 @@ public class mainframe extends javax.swing.JFrame {
 
         jLabel4.setText("Unidade Sanitaria:");
 
-        cmb_unidade_sanitaria.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "1_de_junho_cs", "albasine_cs", "hulene_psa", "mavalane_cs", "mavalane_hg", "pescadores_ps", "romao_psa 1_de_maio_cs   ", "polana_canico_cs", "1_alto_mae_csurb", "hospital_central_de_mapito_hc", "hospital_central_pediatrico_de_maputo_hc", "malhangalene_cs", "maxaquene_csurb", "Hospital_militar_de_maputo", "polana_cimento_csurb", "porto_csurb", "bagamoio_cs", "hospital_psiquiatrico_do_infulene_cs", "inhagoia_ps   ", "magoanine_tenda_psa", "zimpeto_ps", "inhaca_ps", "catembe_cs", "chamissava_cs", "incassane_cs", "mutsekwa_ps", "centro_de_saude_do_chamanculo_cs   ", "chamanculo_hg", "jose_macamo_cs", "jose_macamo_HG", "xipamanine_csurb" }));
+        cmb_unidade_sanitaria.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "1_de_junho_cs", "albasine_cs", "hulene_psa", "mavalane_cs", "mavalane_hg", "pescadores_ps", "romao_psa", "1_de_maio_cs   ", "polana_canico_cs", "1_alto_mae_csurb", "hospital_central_de_mapito_hc", "hospital_central_pediatrico_de_maputo_hc", "malhangalene_cs", "maxaquene_csurb", "Hospital_militar_de_maputo", "polana_cimento_csurb", "porto_csurb", "bagamoio_cs", "hospital_psiquiatrico_do_infulene_cs", "inhagoia_ps", "magoanine_ps", "magoanine_tenda_psa", "zimpeto_ps", "inhaca_ps", "catembe_cs", "chamissava_cs", "incassane_cs", "mutsekwa_ps", "centro_de_saude_do_chamanculo_cs   ", "chamanculo_hg", "jose_macamo_cs", "jose_macamo_HG", "xipamanine_csurb" }));
 
         jLabel5.setText("Periodo: ");
-
-        cmb_periodo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Novembro 2020", "Dezembro 2020", "Janeiro 2021", "Fevereiro 2021", "Março 2021", "Abril 2021", "Maio 2021", "Junho 2021", "Julho 2021", "Agosto 2021", "Setembro 2021" }));
 
         jLabel6.setText("Formulario:");
 
@@ -389,6 +419,7 @@ public class mainframe extends javax.swing.JFrame {
 
        try{
              txt_logs.setText("");
+             
              process = Runtime.getRuntime().exec("python C:\\py-dhis-data-entry\\navigate.py");
              // process = Runtime.getRuntime().exec(new String[]{"python C:\\py-dhis-data-entry\\navigate.py","arg1","arg2"});
              mProcess = process;

@@ -1,0 +1,521 @@
+Return-Path: <abdul.neves@gmail.com>
+Received: from mail-wr1-f74.google.com (209.85.221.74) by mail2 (Axigen)  with (AES128-GCM-SHA256 encrypted) ESMTPS id 050528;  Mon, 1 Mar 2021 10:03:27 +0200
+Received: by mail-wr1-f74.google.com with SMTP id p18so8974957wrt.5        for
+ <agnaldosamuel@ccsaude.org.mz>; Mon, 01 Mar 2021 00:03:27 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;        d=google.com;
+ s=20161025;
+        h=mime-version:reply-to:sender:message-id:date:subject:from:to;
+        bh=xCR6AtRctnbAV24NgY5VyAoXILn2lubxjXMlmb32Szs=;
+        b=OpgZ7yFIGmaQEtZdF1efyrL13ElOPPOMMSL8jJOxBYoT9EIUo6XjNo6iVhPwYNEf6A  
+       moHE+6rOWi9iy7IGMIgezUye3uWzVN69hE0eneiWyHEgyUXoB0JG4N2dfl591Lnu1ymw   
+      Am409uiUqHEYAN7iuTrrMBZx2BOgk/dHGEjeEAOTKkjX4koaxOShuxCUXQVQ36pq2rQd    
+     eptc/79W2jS9nbkVene7ifGDC1X9LPyvPEEpeBlSwtkh6QeIcxugGSBumRqdH+RseVC3     
+    vv+GtZNA7XqmmsgzoA4ZbIVbgFzW9jH0eDma0FcNeU5bXAzfxXf8HnVe0YQ9tHlvVJXz      
+   162g==
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;        d=gmail.com;
+ s=20161025;
+        h=mime-version:reply-to:sender:message-id:date:subject:from:to;
+        bh=xCR6AtRctnbAV24NgY5VyAoXILn2lubxjXMlmb32Szs=;
+        b=AOsFMaNyEGFA3bGYN0+n9BvbgeaDvJhgqD9+H6i6eM4D1+6kvMB0a9kUxesFJDTrlZ  
+       CYw7tMbISouGhO2PlL8ZBZ3S2v8+jV06beX95eN6f5X3LB3GXizNNjiAmUMOfG2CrsWd   
+      HLOBX6LUhrEG4k/e2Ud4RXXSZHlIFDweI7UkA/saODvYydrC1M2rV70ZTpzP2gp6UwlJ    
+     qFFEMBjZI/iaMIoxiLxfTXOb9XSkkHr47r89WL3SAh+Z5ex2BTRLdL24zDFp+V502XFg     
+    Md+Fky3pqSaZofiXOoPuGVbSxN/kEjAHmwz82REhs1kwverY/igfxSsB9ZcFUTy5zE5n      
+   fslQ==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20161025;
+        h=x-gm-message-state:mime-version:reply-to:sender:message-id:date     
+    :subject:from:to;        bh=xCR6AtRctnbAV24NgY5VyAoXILn2lubxjXMlmb32Szs=;
+        b=ntFx7zN1+AcdTxrJIT5bvANfIlYvFcTxeTVTBSn30QT83sKj1kyYFpN1LdtKGcBpWh  
+       Uqkge3NxOPRJVoeIoIY8EgJ5K0GLvJJNLtJWngpTF2BkelditkriizgRWwQhTgzFAXVj   
+      LwKSajbo/by3GhPOxv4beCpHxuS86TTTEyKxqSrhNYE0Gh+VPQP3aZzEP6movBsB2+HW    
+     taWMsvjdyKbvGvbcsBA8jduU/v/OC64CquJCU7SJ+dd8KA8ktXmxmd/OT2UnMF79n7dg     
+    0gUgWTACC0ZIeV5/FrB+eqRZp/pqUYq7hS9B7uS0jXDwWq9x5soB8shdiDlmtPjKK84b      
+   aQ8Q==
+X-Gm-Message-State: AOAM533mmlg45rNodDa8q16qUs5+WSQ6/gApSMLmNYVjCMpRj3dae2cL
+	gJ5NTSQE9WYlMKysVB+FmyGkwofQP3Lybwv3LaXN
+X-Google-Smtp-Source: ABdhPJx2fe2YdEKvdBS2WgCDtxRA2Lrb/yiGj5pft2bgpRLtHWSb1RjuR+u5oTXzy+Bkkck7dF+oLm+e1Qtuevm+FlsV
+MIME-Version: 1.0
+X-Received: by 2002:a5d:558b:: with SMTP id i11mr15104107wrv.176.1614585806263;
+ Mon, 01 Mar 2021 00:03:26 -0800 (PST)
+Reply-To: abdul.neves@gmail.com
+Sender: Google Calendar <calendar-notification@google.com>
+Message-ID: <00000000000071195005bc750df9@google.com>
+Date: Mon, 01 Mar 2021 08:03:26 +0000
+Subject: =?UTF-8?B?SW52aXRhdGlvbjogTWFyY2HDp8OjbyBkbyBFbmNvbnRybyAtLT4gU29sdcOnw7VlcyBUZQ==?=
+	=?UTF-8?B?Y25vbMOzZ2ljYXMgLSBIZWFsdGggQCBNb24gMSBNYXIgMjAyMSAxNTozMCAtIDE2OjMwIChDQVQpIChh?=
+	=?UTF-8?B?Z25hbGRvc2FtdWVsQGNjc2F1ZGUub3JnLm16KQ==?=
+From: abdul.neves@gmail.com
+To: agnaldosamuel@ccsaude.org.mz, sousaaugusto@ccsaude.org.mz, 
+	"Bacar, Tagy, Vodacom Mozambique" <tagy.bacar@vm.co.mz>, Laison Daniel  <laisondaniel@ccsaude.org.mz>, 
+	"'Celso Varinde (CCS Central)'" <celsovarinde@ccsaude.org.mz>,  mauriciotimecane@ccsaude.org.mz, 
+	"Antunes, Rui, Vodacom Mozambique" <rui.antunes@vm.co.mz>
+Content-Type: multipart/mixed; boundary="00000000000071193405bc750df8"
+X-AXIGEN-DK-Result: No records
+DomainKey-Status: no signature
+X-AXIGEN-DKIM-Result: Ok
+DKIM-Status: good
+X-CTCH-RefID: str=0001.0A782F16.603C9FD2.0083:SCGMA2488723,ss=1,re=-4.000,recu=0.000,reip=0.000,cl=1,cld=1,fgs=0
+X-CTCH-Flags: 0
+X-AxigenVirus-Level: 1
+X-CTCH-AV-ThreatsCount: 0
+X-CTCH-VOD: Unknown
+X-AxigenSpam-Level: 1
+X-CTCH-Spam: Unknown
+
+--00000000000071193405bc750df8
+Content-Type: multipart/alternative; boundary="00000000000071193305bc750df6"
+
+--00000000000071193305bc750df6
+Content-Type: text/plain; charset="UTF-8"; format=flowed; delsp=yes
+Content-Transfer-Encoding: base64
+
+WW91IGhhdmUgYmVlbiBpbnZpdGVkIHRvIHRoZSBmb2xsb3dpbmcgZXZlbnQuDQoNClRpdGxlOiBN
+YXJjYcOnw6NvIGRvIEVuY29udHJvIC0tPiBTb2x1w6fDtWVzIFRlY25vbMOzZ2ljYXMgLSBIZWFs
+dGgNCkJvbSBkaWEsIERyLiBMYWlzb24uDQoNCkNvbmZvcm1lIGNvbnZlcnNhZG8gdGVsZWZvbmlj
+YW1lbnRlIG5hIHNleHRhLWZlaXJhLCBzZXJ2ZSBlc3RlIHBhcmEgIA0KZm9ybWFsaXphciBhIGhv
+cmEgZG8gZW5jb250cm8gYSByZWFsaXphciBob2plIHBvciB2aWEgZG8gVGVhbS4gUG9yIGZhdm9y
+LCAgDQphY2VpdGUgZXN0ZSBlbmNvbnRybyBlIHBhcmEgZWZlaXRvcyBkbyBlbmNvbnRybywgdmlk
+ZSBhYmFpeG8gbGluazoNCg0KWW91J3JlIGludml0ZWQgdG8gam9pbiBhIE1pY3Jvc29mdCBUZWFt
+cyBtZWV0aW5nDQoNClRpdGxlOiBTb2x1w6fDtWVzIFRlY25vbMOzZ2ljYXMgLSBIZWFsdGgNClRp
+bWU6IE1hciAxLCAyMDIxIDM6MzA6MDAgUE0NCg0KSm9pbiB0aGUgbWVldGluZyBvbiB5b3VyIGNv
+bXB1dGVyIG9yIG1vYmlsZSBhcHANCmh0dHBzOi8vdGVhbXMubWljcm9zb2Z0LmNvbS9sL21lZXR1
+cC1qb2luLzE5JTNhbWVldGluZ19PVFEwWW1RNE5USXRPREkyWWkwME56QTRMV0kzTkRndE5Ea3dZ
+V1V4TlRBd1pEbGslNDB0aHJlYWQudjIvMD9jb250ZXh0PSU3YiUyMlRpZCUyMiUzYSUyMjMxYTVi
+NjJlLThkMjktNGUzOS05ZmEyLWExYzQxOGM2ZTI0YyUyMiUyYyUyMk9pZCUyMiUzYSUyMjQ3ODFm
+NGE0LTMzMDktNDQwMi1hY2U5LTkxMmE3ZjMzNjdkNiUyMiU3ZA0KDQoNCg0KQWJkdWwgTmV2ZXMg
+fCBDaGllZiBPcGVyYXRpbmcgT2ZmaWNlcg0KQXYuIEtpbSBJbCBTdW5nIG7CuiAxMTgwIHwgVGVs
+OiAgKyAyNTggODIgMzAzIDAxNTEgLyArMjU4IDg0IDMyMyAyMTUxfCBGaXhvOiAgDQorMjU4IDIx
+IDQ5MSA3ODUNCkVtYWlsOiBhbmV2ZXNAc2FsY2FwaXRhaXMuY28ubXoNCg0KDQoNCiAgQSBpbmZv
+cm1hw6fDo28gY29udGlkYSBuZXN0ZSBjb3JyZWlvIGVsZWN0csOzbmljbyDDqSBjb25maWRlbmNp
+YWwgZSAgDQpwcml2aWxlZ2lhZGEsDQpkZXN0aW5hbmRvLXNlIHVuaWNhbWVudGUgw6AgcGVzc29h
+IG91IGVudGlkYWRlIGFjaW1hIGluZGljYWRhLg0KU2UgbyBsZWl0b3IgZGVzdGEgbWVuc2FnZW0g
+bsOjbyBmb3IgbyBzZXUgZGVzdGluYXTDoXJpbywgZmljYSBwZWxhIHByZXNlbnRlDQpub3RpZmlj
+YWRvIGRlIHF1ZSBxdWFscXVlciBkaXZ1bGdhw6fDo28sIGRpc3RyaWJ1acOnw6NvIG91IHJlcHJv
+ZHXDp8OjbyBkbyAgDQpyZXNwZWN0aXZvDQpjb250ZcO6ZG8gw6kgZXhwcmVzc2EgZSBlc3RyaXRh
+bWVudGUgcHJvaWJpZGEuDQoNClRoZSBpbmZvcm1hdGlvbiBjb250YWluZWQgaW4gdGhpcyBlLW1h
+aWwgaXMgcHJpdmlsZWdlZCBhbmQgY29uZmlkZW50aWFsIGFuZCAgDQppcyBpbnRlbmRlZA0Kb25s
+eSBmb3IgdGhlIHVzZSBvZiB0aGUgaW5kaXZpZHVhbCBvciBlbnRpdHkgbmFtZWQgYWJvdmUuIElm
+IHRoZSByZWFkZXIgb2YgIA0KdGhpcyBtZXNzYWdlDQppcyBub3QgdGhlIGludGVuZGVkIHJlY2lw
+aWVudCwgeW91IGFyZSBoZXJlYnkgbm90aWZpZWQgdGhhdCBhbnkgIA0KZGlzc2VtaW5hdGlvbiwg
+ZGlzdHJpYnV0aW9uDQpvciBjb3B5aW5nIG9mIHRoaXMgY29tbXVuaWNhdGlvbiBpcyBzdHJpY3Rs
+eSBwcm9oaWJpdGVkLg0KDQoNCg0KRnJvbTogTGFpc29uIERhbmllbA0KRGF0ZTogV2VkbmVzZGF5
+LCBGZWJydWFyeSAyNCwgMjAyMSBhdCAxNDo1NA0KVG86DQpDYzogLCAsICInQ2Vsc28gVmFyaW5k
+ZSAoQ0NTIENlbnRyYWwpJyIgLCAnQWduYWxkbyBTYW11ZWwnDQpTdWJqZWN0OiBQZWRpZG8gZGUg
+ZW5jb250cm8NCg0KQm9hIHRhcmRlLCBlc3Blcm8gcXVlIGVzdGUgZW1haWwgbGhlIGVuY29udHJl
+IGRlIGJvYSBzYcO6ZGUuDQrCoA0KUHJvcG9tb3MgbyBlbmNvbnRybyBwYXJhIHNlZ3VuZGEgZmVp
+cmEgYXMgMTVoMDDigKZ2aWEgem9vbS4gSW5mZWxpem1lbnRlIGVzdGEgIA0KZGlmw61jaWwgbWFy
+Y2FyIHBhcmEgc2V4dGEgZmVpcmEsIGRldmlkbyBhIGRpc3BvbmliaWxpZGFkZSBkbyBwZXNzb2Fs
+IHF1ZSAgDQpkZXZlIHBhcnRpY2lwYXIuDQrCoA0KwqANCsKgDQpDdW1wcmltZW50bw0KwqANCg0K
+TGFpc29uIERhbmllbA0KRGlyZWN0b3IgVMOpY25pY28NCsKgDQpQSE9ORTogODIgNTMyNDYwMS84
+NCA0MDI4MTQ4IMKgRkFYOiArMjU4IDIxIDQ5NCAyMTINClBvc3RhbCBBZGRyZXNzOiBQTyBCb3gg
+NDE1Nw0KUGh5c2ljYWwgQWRkcmVzczogUnVhIERhbWnDo28gZGUgR29pcyBOLiAyNzkNCk1hcHV0
+by0gTW96YW1iaXF1ZQ0KRW1haWw6IG1haWx0bzpsYWlzb25kYW5pZWxAY2NzYXVkZS5vcmcubXoN
+CldlYnNpdGU6IGh0dHA6Ly93d3cuY2NzYXVkZS5vcmcubXovDQrCoA0KDQpXaGVuOiBNb24gMSBN
+YXIgMjAyMSAxNTozMCDigJMgMTY6MzAgQ2VudHJhbCBBZnJpY2EgVGltZSAtIE1hcHV0bw0KV2hl
+cmU6IFRlYW0NCkNhbGVuZGFyOiBhZ25hbGRvc2FtdWVsQGNjc2F1ZGUub3JnLm16DQpXaG86DQog
+ICAgICogYWJkdWwubmV2ZXNAZ21haWwuY29tLSBvcmdhbmlzZXINCiAgICAgKiBzb3VzYWF1Z3Vz
+dG9AY2NzYXVkZS5vcmcubXoNCiAgICAgKiBCYWNhciwgVGFneSwgVm9kYWNvbSBNb3phbWJpcXVl
+DQogICAgICogTGFpc29uIERhbmllbA0KICAgICAqICdDZWxzbyBWYXJpbmRlIChDQ1MgQ2VudHJh
+bCknDQogICAgICogJ0FnbmFsZG8gU2FtdWVsJw0KICAgICAqIG1hdXJpY2lvdGltZWNhbmVAY2Nz
+YXVkZS5vcmcubXoNCiAgICAgKiBBbnR1bmVzLCBSdWksIFZvZGFjb20gTW96YW1iaXF1ZQ0KDQpF
+dmVudCBkZXRhaWxzOiAgDQpodHRwczovL2NhbGVuZGFyLmdvb2dsZS5jb20vY2FsZW5kYXIvZXZl
+bnQ/YWN0aW9uPVZJRVcmZWlkPVh6WXdjVE13WXpGbk5qQnZNekJsTVdrMk1HODBZV014WnpZd2Nt
+bzRaM0JzT0RoeWFqSmpNV2c0TkhNek5HZzVaell3Y3pNd1l6Rm5OakJ2TXpCak1XYzRiM0EwTkdV
+eU1UWTRjV3N5WkhCb05qRXlhemhrY0djMk5HOHpNR014WnpZd2J6TXdZekZuTmpCdk16QmpNV2My
+TUc4ek1tTXhaell3YnpNd1l6Rm5Oamh2YXpaamNUVTJOSE5yTkdkd2FqWm5jV295Wnpsck5tUXhO
+REpqY0c4NE5UTTBNbWM1YkRod01Xb3laVEkxT0dOeE1DQmhaMjVoYkdSdmMyRnRkV1ZzUUdOamMy
+RjFaR1V1YjNKbkxtMTYmdG9rPU1qRWpZV0prZFd3dWJtVjJaWE5BWjIxaGFXd3VZMjl0WTJFNU5H
+VTVaVGswTW1FNU56VXlPR1l5T1dZek0yTTNORE5tTTJSak5XRTROREUzTmpWak13JmN0ej1BZnJp
+Y2ElMkZNYXB1dG8maGw9ZW5fR0ImZXM9MA0KDQpJbnZpdGF0aW9uIGZyb20gR29vZ2xlIENhbGVu
+ZGFyOiBodHRwczovL2NhbGVuZGFyLmdvb2dsZS5jb20vY2FsZW5kYXIvDQoNCllvdSBhcmUgcmVj
+ZWl2aW5nIHRoaXMgY291cnRlc3kgZW1haWwgYXQgdGhlIGFjY291bnQgIA0KYWduYWxkb3NhbXVl
+bEBjY3NhdWRlLm9yZy5teiBiZWNhdXNlIHlvdSBhcmUgYW4gYXR0ZW5kZWUgb2YgdGhpcyBldmVu
+dC4NCg0KVG8gc3RvcCByZWNlaXZpbmcgZnV0dXJlIHVwZGF0ZXMgZm9yIHRoaXMgZXZlbnQsIGRl
+Y2xpbmUgdGhpcyBldmVudC4gIA0KQWx0ZXJuYXRpdmVseSwgeW91IGNhbiBzaWduIHVwIGZvciBh
+IEdvb2dsZSBBY2NvdW50IGF0ICANCmh0dHBzOi8vY2FsZW5kYXIuZ29vZ2xlLmNvbS9jYWxlbmRh
+ci8gYW5kIGNvbnRyb2wgeW91ciBub3RpZmljYXRpb24gIA0Kc2V0dGluZ3MgZm9yIHlvdXIgZW50
+aXJlIGNhbGVuZGFyLg0KDQpGb3J3YXJkaW5nIHRoaXMgaW52aXRhdGlvbiBjb3VsZCBhbGxvdyBh
+bnkgcmVjaXBpZW50IHRvIHNlbmQgYSByZXNwb25zZSB0byAgDQp0aGUgb3JnYW5pc2VyIGFuZCBi
+ZSBhZGRlZCB0byB0aGUgZ3Vlc3QgbGlzdCwgaW52aXRlIG90aGVycyByZWdhcmRsZXNzIG9mICAN
+CnRoZWlyIG93biBpbnZpdGF0aW9uIHN0YXR1cyBvciB0byBtb2RpZnkgeW91ciBSU1ZQLiBMZWFy
+biBtb3JlIGF0ICANCmh0dHBzOi8vc3VwcG9ydC5nb29nbGUuY29tL2NhbGVuZGFyL2Fuc3dlci8z
+NzEzNSNmb3J3YXJkaW5nDQo=
+--00000000000071193305bc750df6
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<span itemscope itemtype=3D"http://schema.org/InformAction"><span style=3D"= display:none" itemprop=3D"about" itemscope itemtype=3D"http://schema.org/Pe= rson"><meta itemprop=3D"description" content=3D"Invitation from abdul.neves= @gmail.com"/></span><span itemprop=3D"object" itemscope itemtype=3D"http://= schema.org/Event"><div style=3D""><table cellspacing=3D"0" cellpadding=3D"8= " border=3D"0" summary=3D"" style=3D"width:100%;font-family:Arial,Sans-seri=
+f;border:1px Solid #ccc;border-width:1px 2px 2px 1px;background-color:#fff;= "><tr><td><meta itemprop=3D"eventStatus" content=3D"http://schema.org/Event=
+Scheduled"/><h4 style=3D"padding:6px 0;margin:0 0 4px 0;font-family:Arial,S= ans-serif;font-size:13px;line-height:1.4;border:1px Solid #fff;background:#= fff;color:#090;font-weight:normal"><strong>You have been invited to the fol= lowing event.</strong></h4><div style=3D"padding:2px"><span itemprop=3D"pub= lisher" itemscope itemtype=3D"http://schema.org/Organization"><meta itempro= p=3D"name" content=3D"Google Calendar"/></span><meta itemprop=3D"eventId/go= ogleCalendar" content=3D"_60q30c1g60o30e1i60o4ac1g60rj8gpl88rj2c1h84s34h9g6=
+0s30c1g60o30c1g8op44e2168qk2dph612k8dpg64o30c1g60o30c1g60o30c1g60o32c1g60o3=
+0c1g68ok6cq564sk4gpj6gqj2g9k6d142cpo85342g9l8p1j2e258cq0"/><h3 style=3D"pad=
+ding:0 0 6px 0;margin:0;font-family:Arial,Sans-serif;font-size:16px;font-we=
+ight:bold;color:#222"><span itemprop=3D"name">Marca=C3=A7=C3=A3o do Encontr= o --&gt; Solu=C3=A7=C3=B5es Tecnol=C3=B3gicas - Health</span></h3><table st= yle=3D"display:inline-table" cellpadding=3D"0" cellspacing=3D"0" border=3D"= 0" summary=3D"Event details"><tr><td style=3D"padding:0 1em 10px 0;font-fam= ily:Arial,Sans-serif;font-size:13px;color:#888;white-space:nowrap;width:90p=
+x" valign=3D"top"><div><i style=3D"font-style:normal">When</i></div></td><t=
+d style=3D"padding-bottom:10px;font-family:Arial,Sans-serif;font-size:13px;=
+color:#222" valign=3D"top"><div style=3D"text-indent:-1px"><time itemprop= =3D"startDate" datetime=3D"20210301T133000Z"></time><time itemprop=3D"endDa= te" datetime=3D"20210301T143000Z"></time>Mon 1 Mar 2021 15:30 =E2=80=93 16:=
+30 <span style=3D"color:#888">Central Africa Time - Maputo</span></div></td=
+></tr><tr><td style=3D"padding:0 1em 10px 
+>0;font-family:Arial,Sans-serif;fo=
+nt-size:13px;color:#888;white-space:nowrap;width:90px" valign=3D"top"><div>= <i style=3D"font-style:normal">Where</i></div></td><td style=3D"padding-bot= tom:10px;font-family:Arial,Sans-serif;font-size:13px;color:#222" valign=3D"= top"><div style=3D"text-indent:-1px"><span itemprop=3D"location" itemscope = itemtype=3D"http://schema.org/Place"><span itemprop=3D"name" class=3D"notra= nslate">Team</span><span dir=3D"ltr"> (<a href=3D"https://www.google.com/ma=
+ps/search/Team?hl=3Den-GB" style=3D"color:#20c;white-space:nowrap" target= =3D"_blank" itemprop=3D"map">map</a>)</span></span></div></td></tr><tr><td =
+style=3D"padding:0 1em 10px 0;font-family:Arial,Sans-serif;font-size:13px;c=
+olor:#888;white-space:nowrap;width:90px" valign=3D"top"><div><i style=3D"fo= nt-style:normal">Calendar</i></div></td><td style=3D"padding-bottom:10px;fo= nt-family:Arial,Sans-serif;font-size:13px;color:#222" valign=3D"top"><div s= tyle=3D"text-indent:-1px">agnaldosamuel@ccsaude.org.mz</div></td></tr><tr><=
+td style=3D"padding:0 1em 10px 0;font-family:Arial,Sans-serif;font-size:13p=
+x;color:#888;white-space:nowrap;width:90px" valign=3D"top"><div><i style=3D= "font-style:normal">Who</i></div></td><td style=3D"padding-bottom:10px;font=
+-family:Arial,Sans-serif;font-size:13px;color:#222" valign=3D"top"><table c= ellspacing=3D"0" cellpadding=3D"0"><tr><td style=3D"padding-right:10px;font= -family:Arial,Sans-serif;font-size:13px;color:#222;width:10px"><div style= =3D"text-indent:-1px"><span style=3D"font-family:Courier New,monospace">&#x= 2022;</span></div></td><td style=3D"padding-right:10px;font-family:Arial,Sa=
+ns-serif;font-size:13px;color:#222"><div style=3D"text-indent:-1px"><div><d=
+iv style=3D"margin:0 0 0.3em 0"><span class=3D"notranslate">abdul.neves@gma=
+il.com</span><span itemprop=3D"organizer" itemscope itemtype=3D"http://sche= ma.org/Person"><meta itemprop=3D"name" content=3D"abdul.neves@gmail.com"/><=
+meta itemprop=3D"email" content=3D"abdul.neves@gmail.com"/></span><span sty=
+le=3D"font-size:11px;color:#888">- organiser</span></div></div></div></td><=
+/tr><tr><td style=3D"padding-right:10px;font-family:Arial,Sans-serif;font-s=
+ize:13px;color:#222;width:10px"><div style=3D"text-indent:-1px"><span style= =3D"font-family:Courier New,monospace">&#x2022;</span></div></td><td style= =3D"padding-right:10px;font-family:Arial,Sans-serif;font-size:13px;color:#2=
+22"><div style=3D"text-indent:-1px"><div><div style=3D"margin:0 0 0.3em 0">= <span itemprop=3D"attendee" itemscope itemtype=3D"http://schema.org/Person"=
+><span itemprop=3D"name" 
+>class=3D"notranslate">sousaaugusto@ccsaude.org.mz<=
+/span><meta itemprop=3D"email" content=3D"sousaaugusto@ccsaude.org.mz"/></s=
+pan></div></div></div></td></tr><tr><td 
+pan>style=3D"padding-right:10px;font-fa=
+mily:Arial,Sans-serif;font-size:13px;color:#222;width:10px"><div style=3D"t= ext-indent:-1px"><span style=3D"font-family:Courier New,monospace">&#x2022;= </span></div></td><td style=3D"padding-right:10px;font-family:Arial,Sans-se=
+rif;font-size:13px;color:#222"><div style=3D"text-indent:-1px"><div><div st=
+yle=3D"margin:0 0 0.3em 0"><span itemprop=3D"attendee" itemscope itemtype= =3D"http://schema.org/Person"><span itemprop=3D"name" class=3D"notranslate"=
+>Bacar, Tagy, Vodacom Mozambique</span><meta itemprop=3D"email" 
+>content=3D"=
+tagy.bacar@vm.co.mz"/></span></div></div></div></td></tr><tr><td style=3D"p= adding-right:10px;font-family:Arial,Sans-serif;font-size:13px;color:#222;wi=
+dth:10px"><div style=3D"text-indent:-1px"><span style=3D"font-family:Courie= r New,monospace">&#x2022;</span></div></td><td style=3D"padding-right:10px;= font-family:Arial,Sans-serif;font-size:13px;color:#222"><div style=3D"text-= indent:-1px"><div><div style=3D"margin:0 0 0.3em 0"><span itemprop=3D"atten= dee" itemscope itemtype=3D"http://schema.org/Person"><span itemprop=3D"name= " class=3D"notranslate">Laison Daniel</span><meta itemprop=3D"email" conten= t=3D"laisondaniel@ccsaude.org.mz"/></span></div></div></div></td></tr><tr><=
+td style=3D"padding-right:10px;font-family:Arial,Sans-serif;font-size:13px;=
+color:#222;width:10px"><div style=3D"text-indent:-1px"><span style=3D"font-= family:Courier New,monospace">&#x2022;</span></div></td><td style=3D"paddin= g-right:10px;font-family:Arial,Sans-serif;font-size:13px;color:#222"><div s= tyle=3D"text-indent:-1px"><div><div style=3D"margin:0 0 0.3em 0"><span item= prop=3D"attendee" itemscope itemtype=3D"http://schema.org/Person"><span ite= mprop=3D"name" class=3D"notranslate">&#39;Celso Varinde (CCS Central)&#39;<= /span><meta itemprop=3D"email" content=3D"celsovarinde@ccsaude.org.mz"/></s=
+pan></div></div></div></td></tr><tr><td 
+pan>style=3D"padding-right:10px;font-fa=
+mily:Arial,Sans-serif;font-size:13px;color:#222;width:10px"><div style=3D"t= ext-indent:-1px"><span style=3D"font-family:Courier New,monospace">&#x2022;= </span></div></td><td style=3D"padding-right:10px;font-family:Arial,Sans-se=
+rif;font-size:13px;color:#222"><div style=3D"text-indent:-1px"><div><div st=
+yle=3D"margin:0 0 0.3em 0"><span itemprop=3D"attendee" itemscope itemtype= =3D"http://schema.org/Person"><span itemprop=3D"name" class=3D"notranslate"=
+>&#39;Agnaldo Samuel&#39;</span><meta itemprop=3D"email" 
+>content=3D"agnaldo=
+samuel@ccsaude.org.mz"/></span></div></div></div></td></tr><tr><td style=3D= "padding-right:10px;font-family:Arial,Sans-serif;font-size:13px;color:#222;=
+width:10px"><div style=3D"text-indent:-1px"><span style=3D"font-family:Cour= ier New,monospace">&#x2022;</span></div></td><td style=3D"padding-right:10p= x;font-family:Arial,Sans-serif;font-size:13px;color:#222"><div style=3D"tex= t-indent:-1px"><div><div style=3D"margin:0 0 0.3em 0"><span itemprop=3D"att= endee" itemscope itemtype=3D"http://schema.org/Person"><span itemprop=3D"na= me" class=3D"notranslate">mauriciotimecane@ccsaude.org.mz</span><meta itemp= rop=3D"email" content=3D"mauriciotimecane@ccsaude.org.mz"/></span></div></d=
+iv></div></td></tr><tr><td 
+iv>style=3D"padding-right:10px;font-family:Arial,Sa=
+ns-serif;font-size:13px;color:#222;width:10px"><div style=3D"text-indent:-1= px"><span style=3D"font-family:Courier New,monospace">&#x2022;</span></div>=
+</td><td style=3D"padding-right:10px;font-family:Arial,Sans-serif;font-size=
+:13px;color:#222"><div style=3D"text-indent:-1px"><div><div style=3D"margin=
+:0 0 0.3em 0"><span itemprop=3D"attendee" itemscope itemtype=3D"http://sche= ma.org/Person"><span itemprop=3D"name" class=3D"notranslate">Antunes, Rui, = Vodacom Mozambique</span><meta itemprop=3D"email" content=3D"rui.antunes@vm= .co.mz"/></span></div></div></div></td></tr></table></td></tr></table><div = style=3D"float:right;font-weight:bold;font-size:13px"> <a href=3D"https://c= alendar.google.com/calendar/event?action=3DVIEW&amp;eid=3DXzYwcTMwYzFnNjBvM=
+zBlMWk2MG80YWMxZzYwcmo4Z3BsODhyajJjMWg4NHMzNGg5ZzYwczMwYzFnNjBvMzBjMWc4b3A0=
+NGUyMTY4cWsyZHBoNjEyazhkcGc2NG8zMGMxZzYwbzMwYzFnNjBvMzBjMWc2MG8zMmMxZzYwbzM=
+wYzFnNjhvazZjcTU2NHNrNGdwajZncWoyZzlrNmQxNDJjcG84NTM0Mmc5bDhwMWoyZTI1OGNxMC=
+BhZ25hbGRvc2FtdWVsQGNjc2F1ZGUub3JnLm16&amp;tok=3DMjEjYWJkdWwubmV2ZXNAZ21haW=
+wuY29tY2E5NGU5ZTk0MmE5NzUyOGYyOWYzM2M3NDNmM2RjNWE4NDE3NjVjMw&amp;ctz=3DAfri=
+ca%2FMaputo&amp;hl=3Den_GB&amp;es=3D0" style=3D"color:#20c;white-space:nowr=
+ap" itemprop=3D"url">more details &raquo;</a><br></div><div style=3D"paddin= g-bottom:15px;font-family:Arial,Sans-serif;font-size:13px;color:#222;white-=
+space:pre-wrap!important;white-space:-moz-pre-wrap!important;white-space:-p=
+re-wrap!important;white-space:-o-pre-wrap!important;white-space:pre;word-wr=
+ap:break-word"><span>Bom dia, Dr. Laison.<p>Conforme conversado telefonicam= ente na sexta-feira, serve este para formalizar a hora do encontro a realiz= ar hoje por via do Team. Por favor, aceite este encontro e para efeitos do = encontro, vide abaixo link:</p><p>You&#39;re invited to join a Microsoft Te= ams meeting</p><p>Title: Solu=C3=A7=C3=B5es Tecnol=C3=B3gicas - Health<br>T=
+ime: Mar 1, 2021 3:30:00 PM</p><p>Join the meeting on your computer or mobi= le app<br><a href=3D"https://www.google.com/url?q=3Dhttps%3A%2F%2Fteams.mic=
+rosoft.com%2Fl%2Fmeetup-join%2F19%253ameeting_OTQ0YmQ4NTItODI2Yi00NzA4LWI3N=
+DgtNDkwYWUxNTAwZDlk%2540thread.v2%2F0%3Fcontext%3D%257b%2522Tid%2522%253a%2=
+52231a5b62e-8d29-4e39-9fa2-a1c418c6e24c%2522%252c%2522Oid%2522%253a%2522478=
+1f4a4-3309-4402-ace9-912a7f3367d6%2522%257d&amp;sa=3DD&amp;source=3Dcalenda=
+r&amp;usd=3D2&amp;usg=3DAOvVaw1xqFdomPh4PADXRjmrUOjG" target=3D"_blank">htt= ps://teams.microsoft.com/l/meetup-join/19%3ameeting_OTQ0YmQ4NTItODI2Yi00NzA=
+4LWI3NDgtNDkwYWUxNTAwZDlk%40thread.v2/0?context=3D%7b%22Tid%22%3a%2231a5b62=
+e-8d29-4e39-9fa2-a1c418c6e24c%22%2c%22Oid%22%3a%224781f4a4-3309-4402-ace9-9=
+12a7f3367d6%22%7d</a> </p><p> <br> <br>Abdul Neves | Chief Operating Office= r <br>Av. Kim Il Sung n=C2=BA 1180 | Tel:  + 258 82 303 0151 / +258 84 323 =
+2151| Fixo: +258 21 491 785<br>Email: <a 
+2151| href=3D"mailto:aneves@salcapitais.=
+co.mz" target=3D"_blank">aneves@salcapitais.co.mz</a>  </p><p></p><p> A inf= orma=C3=A7=C3=A3o contida neste correio electr=C3=B3nico =C3=A9 confidencia= l e privilegiada,<br>destinando-se unicamente =C3=A0 pessoa ou entidade aci= ma indicada.<br>Se o leitor desta mensagem n=C3=A3o for o seu destinat=C3= =A1rio, fica pela presente<br>notificado de que qualquer divulga=C3=A7=C3= =A3o, distribui=C3=A7=C3=A3o ou reprodu=C3=A7=C3=A3o do respectivo<br>conte= =C3=BAdo =C3=A9 expressa e estritamente proibida.</p><p>The information con= tained in this e-mail is privileged and confidential and is intended<br>onl= y for the use of the individual or entity named above. If the reader of thi= s message<br>is not the intended recipient, you are hereby notified that an= y dissemination, distribution<br>or copying of this communication is strict= ly prohibited.<br> </p><p><br>From: Laison Daniel <u></u><br>Date: Wednesda= y, February 24, 2021 at 14:54<br>To: <u></u><br>Cc: <u></u>, <u></u>, &quot= ;&#39;Celso Varinde (CCS Central)&#39;&quot; <u></u>, &#39;Agnaldo Samuel&#= 39; <u></u><br>Subject: Pedido de encontro </p><p>Boa tarde, espero que est= e email lhe encontre de boa sa=C3=BAde.<br>=C2=A0<br>Propomos o encontro pa= ra segunda feira as 15h00=E2=80=A6via zoom. Infelizmente esta dif=C3=ADcil = marcar para sexta feira, devido a disponibilidade do pessoal que deve parti= cipar. <br>=C2=A0<br>=C2=A0<br>=C2=A0<br>Cumprimento <br>=C2=A0</p><p>Laiso= n Daniel<br>Director T=C3=A9cnico<br>=C2=A0<br>PHONE: 82 5324601/84 4028148=
+ =C2=A0FAX: +258 21 494 212<br>Postal Address: PO Box 4157<br>Physical Addr=
+ess: Rua Dami=C3=A3o de Gois N. 279<br>Maputo- Mozambique<br>Email: mailto:= <a href=3D"mailto:laisondaniel@ccsaude.org.mz" target=3D"_blank">laisondani=
+el@ccsaude.org.mz</a><br>Website: <a href=3D"https://www.google.com/url?q=
+=3Dhttp%3A%2F%2Fwww.ccsaude.org.mz%2F&amp;sa=3DD&amp;source=3Dcalendar&amp;=
+usd=3D2&amp;usg=3DAOvVaw1tcGOW_-Gv7ghoDrAk4jVz" target=3D"_blank">http://ww= w.ccsaude.org.mz/</a><br>=C2=A0<br></p></span><meta itemprop=3D"description= " content=3D"Bom dia, Dr. Laison.
+
+Conforme conversado telefonicamente na sexta-feira, serve este para formali= zar a hora do encontro a realizar hoje por via do Team. Por favor, aceite e= ste encontro e para efeitos do encontro, vide abaixo link:
+
+You&#39;re invited to join a Microsoft Teams meeting
+
+Title: Solu=C3=A7=C3=B5es Tecnol=C3=B3gicas - Health
+Time: Mar 1, 2021 3:30:00 PM
+
+Join the meeting on your computer or mobile app https://teams.microsoft.com/l/meetup-join/19%3ameeting_OTQ0YmQ4NTItODI2Yi00=
+NzA4LWI3NDgtNDkwYWUxNTAwZDlk%40thread.v2/0?context=3D%7b%22Tid%22%3a%2231a5=
+b62e-8d29-4e39-9fa2-a1c418c6e24c%22%2c%22Oid%22%3a%224781f4a4-3309-4402-ace=
+9-912a7f3367d6%22%7d=20
+
+=20
+=20
+Abdul Neves | Chief Operating Officer=20 Av. Kim Il Sung n=C2=BA 1180 | Tel:  + 258 82 303 0151 / +258 84 323 2151| =
+Fixo: +258 21 491 785
+Email: aneves@salcapitais.co.mz =20
+
+
+
+ A informa=C3=A7=C3=A3o contida neste correio electr=C3=B3nico =C3=A9 confi= dencial e privilegiada, destinando-se unicamente =C3=A0 pessoa ou entidade acima indicada.
+Se o leitor desta mensagem n=C3=A3o for o seu destinat=C3=A1rio, fica pela = presente notificado de que qualquer divulga=C3=A7=C3=A3o, distribui=C3=A7=C3=A3o ou = reprodu=C3=A7=C3=A3o do respectivo conte=C3=BAdo =C3=A9 expressa e estritamente proibida.
+
+The information contained in this e-mail is privileged and confidential and=  is intended only for the use of the individual or entity named above. If the reader of = this message is not the intended recipient, you are hereby notified that any disseminati= on, distribution or copying of this communication is strictly prohibited.
+=20
+
+
+From: Laison Daniel=20
+Date: Wednesday, February 24, 2021 at 14:54
+To:=20
+Cc: , , &quot;&#39;Celso Varinde (CCS Central)&#39;&quot; , &#39;Agnaldo Sa=
+muel&#39;=20
+Subject: Pedido de encontro=20
+
+Boa tarde, espero que este email lhe encontre de boa sa=C3=BAde.
+=C2=A0
+Propomos o encontro para segunda feira as 15h00=E2=80=A6via zoom. Infelizme= nte esta dif=C3=ADcil marcar para sexta feira, devido a disponibilidade do = pessoal que deve participar.=20
+=C2=A0
+=C2=A0
+=C2=A0
+Cumprimento=20
+=C2=A0
+
+Laison Daniel
+Director T=C3=A9cnico
+=C2=A0
+PHONE: 82 5324601/84 4028148 =C2=A0FAX: +258 21 494 212 Postal Address: PO Box 4157 Physical Address: Rua Dami=C3=A3o de Gois N. 279
+Maputo- Mozambique
+Email: mailto:laisondaniel@ccsaude.org.mz
+Website: http://www.ccsaude.org.mz/
+=C2=A0
+"/></div></div><p style=3D"color:#222;font-size:13px;margin:0"><span style= =3D"color:#888">Going (agnaldosamuel@ccsaude.org.mz)?&nbsp;&nbsp;&nbsp;</sp=
+an><wbr><strong><span itemprop=3D"potentialaction" itemscope 
+an>itemtype=3D"ht=
+tp://schema.org/RsvpAction"><meta itemprop=3D"attendance" content=3D"http:/= /schema.org/RsvpAttendance/Yes"/><span itemprop=3D"handler" itemscope itemt= ype=3D"http://schema.org/HttpActionHandler"><link itemprop=3D"method" href= =3D"http://schema.org/HttpRequestMethod/GET"/><a href=3D"https://calendar.g= oogle.com/calendar/event?action=3DRESPOND&amp;eid=3DXzYwcTMwYzFnNjBvMzBlMWk=
+2MG80YWMxZzYwcmo4Z3BsODhyajJjMWg4NHMzNGg5ZzYwczMwYzFnNjBvMzBjMWc4b3A0NGUyMT=
+Y4cWsyZHBoNjEyazhkcGc2NG8zMGMxZzYwbzMwYzFnNjBvMzBjMWc2MG8zMmMxZzYwbzMwYzFnN=
+jhvazZjcTU2NHNrNGdwajZncWoyZzlrNmQxNDJjcG84NTM0Mmc5bDhwMWoyZTI1OGNxMCBhZ25h=
+bGRvc2FtdWVsQGNjc2F1ZGUub3JnLm16&amp;rst=3D1&amp;tok=3DMjEjYWJkdWwubmV2ZXNA=
+Z21haWwuY29tY2E5NGU5ZTk0MmE5NzUyOGYyOWYzM2M3NDNmM2RjNWE4NDE3NjVjMw&amp;ctz=
+=3DAfrica%2FMaputo&amp;hl=3Den_GB&amp;es=3D0" style=3D"color:#20c;white-spa= ce:nowrap" itemprop=3D"url">Yes</a></span></span><span style=3D"margin:0 0.= 4em;font-weight:normal"> - </span><span itemprop=3D"potentialaction" itemsc= ope itemtype=3D"http://schema.org/RsvpAction"><meta itemprop=3D"attendance"=  content=3D"http://schema.org/RsvpAttendance/Maybe"/><span itemprop=3D"hand= ler" itemscope itemtype=3D"http://schema.org/HttpActionHandler"><link itemp= rop=3D"method" href=3D"http://schema.org/HttpRequestMethod/GET"/><a href=3D= "https://calendar.google.com/calendar/event?action=3DRESPOND&amp;eid=3DXzYw=
+cTMwYzFnNjBvMzBlMWk2MG80YWMxZzYwcmo4Z3BsODhyajJjMWg4NHMzNGg5ZzYwczMwYzFnNjB=
+vMzBjMWc4b3A0NGUyMTY4cWsyZHBoNjEyazhkcGc2NG8zMGMxZzYwbzMwYzFnNjBvMzBjMWc2MG=
+8zMmMxZzYwbzMwYzFnNjhvazZjcTU2NHNrNGdwajZncWoyZzlrNmQxNDJjcG84NTM0Mmc5bDhwM=
+WoyZTI1OGNxMCBhZ25hbGRvc2FtdWVsQGNjc2F1ZGUub3JnLm16&amp;rst=3D3&amp;tok=3DM=
+jEjYWJkdWwubmV2ZXNAZ21haWwuY29tY2E5NGU5ZTk0MmE5NzUyOGYyOWYzM2M3NDNmM2RjNWE4=
+NDE3NjVjMw&amp;ctz=3DAfrica%2FMaputo&amp;hl=3Den_GB&amp;es=3D0" style=3D"co= lor:#20c;white-space:nowrap" itemprop=3D"url">Maybe</a></span></span><span =
+style=3D"margin:0 0.4em;font-weight:normal"> - </span><span itemprop=3D"pot= entialaction" itemscope itemtype=3D"http://schema.org/RsvpAction"><meta ite= mprop=3D"attendance" content=3D"http://schema.org/RsvpAttendance/No"/><span=
+ itemprop=3D"handler" itemscope itemtype=3D"http://schema.org/HttpActionHan=
+dler"><link itemprop=3D"method" href=3D"http://schema.org/HttpRequestMethod=
+/GET"/><a href=3D"https://calendar.google.com/calendar/event?action=3DRESPO=
+ND&amp;eid=3DXzYwcTMwYzFnNjBvMzBlMWk2MG80YWMxZzYwcmo4Z3BsODhyajJjMWg4NHMzNG=
+g5ZzYwczMwYzFnNjBvMzBjMWc4b3A0NGUyMTY4cWsyZHBoNjEyazhkcGc2NG8zMGMxZzYwbzMwY=
+zFnNjBvMzBjMWc2MG8zMmMxZzYwbzMwYzFnNjhvazZjcTU2NHNrNGdwajZncWoyZzlrNmQxNDJj=
+cG84NTM0Mmc5bDhwMWoyZTI1OGNxMCBhZ25hbGRvc2FtdWVsQGNjc2F1ZGUub3JnLm16&amp;rs=
+t=3D2&amp;tok=3DMjEjYWJkdWwubmV2ZXNAZ21haWwuY29tY2E5NGU5ZTk0MmE5NzUyOGYyOWY=
+zM2M3NDNmM2RjNWE4NDE3NjVjMw&amp;ctz=3DAfrica%2FMaputo&amp;hl=3Den_GB&amp;es=
+=3D0" style=3D"color:#20c;white-space:nowrap" itemprop=3D"url">No</a></span=
+></span></strong>&nbsp;&nbsp;&nbsp;&nbsp;<wbr><a 
+>href=3D"https://calendar.g=
+oogle.com/calendar/event?action=3DVIEW&amp;eid=3DXzYwcTMwYzFnNjBvMzBlMWk2MG=
+80YWMxZzYwcmo4Z3BsODhyajJjMWg4NHMzNGg5ZzYwczMwYzFnNjBvMzBjMWc4b3A0NGUyMTY4c=
+WsyZHBoNjEyazhkcGc2NG8zMGMxZzYwbzMwYzFnNjBvMzBjMWc2MG8zMmMxZzYwbzMwYzFnNjhv=
+azZjcTU2NHNrNGdwajZncWoyZzlrNmQxNDJjcG84NTM0Mmc5bDhwMWoyZTI1OGNxMCBhZ25hbGR=
+vc2FtdWVsQGNjc2F1ZGUub3JnLm16&amp;tok=3DMjEjYWJkdWwubmV2ZXNAZ21haWwuY29tY2E=
+5NGU5ZTk0MmE5NzUyOGYyOWYzM2M3NDNmM2RjNWE4NDE3NjVjMw&amp;ctz=3DAfrica%2FMapu=
+to&amp;hl=3Den_GB&amp;es=3D0" style=3D"color:#20c;white-space:nowrap" itemp= rop=3D"url">more options &raquo;</a></p></td></tr><tr><td style=3D"backgrou= nd-color:#f6f6f6;color:#888;border-top:1px Solid #ccc;font-family:Arial,San= s-serif;font-size:11px"><p>Invitation from <a href=3D"https://calendar.goog= le.com/calendar/" target=3D"_blank" style=3D"">Google Calendar</a></p><p>Yo= u are receiving this courtesy email at the account agnaldosamuel@ccsaude.or= g.mz because you are an attendee of this event.</p><p>To stop receiving fut= ure updates for this event, decline this event. Alternatively, you can sign=  up for a Google Account at https://calendar.google.com/calendar/ and contr= ol your notification settings for your entire calendar.</p><p>Forwarding th= is invitation could allow any recipient to send a response to the organiser=  and be added to the guest list, invite others regardless of their own invi= tation status or to modify your RSVP. <a href=3D"https://support.google.com=
+/calendar/answer/37135#forwarding">Learn more</a>.</p></td></tr></table></d=
+iv></span></span>
+--00000000000071193305bc750df6
+Content-Type: text/calendar; charset="UTF-8"; method=REQUEST
+Content-Transfer-Encoding: quoted-printable
+
+BEGIN:VCALENDAR
+PRODID:-//Google Inc//Google Calendar 70.9054//EN
+VERSION:2.0
+CALSCALE:GREGORIAN
+METHOD:REQUEST
+BEGIN:VEVENT
+DTSTART:20210301T133000Z
+DTEND:20210301T143000Z
+DTSTAMP:20210301T080326Z
+ORGANIZER;CN=3Dabdul.neves@gmail.com:mailto:abdul.neves@gmail.com
+UID:040000008200E00074C5B7101A82E00800000000F2B8A25A710ED701000000000000000
+ 01000000021C3E19BC3451A43BA38AFAA5FC18EC4
+ATTENDEE;CUTYPE=3DINDIVIDUAL;ROLE=3DREQ-PARTICIPANT;PARTSTAT=3DNEEDS-ACTION=
+;RSVP=3D
+ TRUE;CN=3Dsousaaugusto@ccsaude.org.mz;X-NUM-GUESTS=3D0:mailto:sousaaugusto=
+@ccsa
+ ude.org.mz
+ATTENDEE;CUTYPE=3DINDIVIDUAL;ROLE=3DREQ-PARTICIPANT;PARTSTAT=3DNEEDS-ACTION=
+;RSVP=3D
+ TRUE;CN=3D"Bacar, Tagy, Vodacom Mozambique";X-NUM-GUESTS=3D0:mailto:tagy.b=
+acar@
+ vm.co.mz
+ATTENDEE;CUTYPE=3DINDIVIDUAL;ROLE=3DREQ-PARTICIPANT;PARTSTAT=3DNEEDS-ACTION=
+;RSVP=3D
+ TRUE;CN=3DLaison Daniel;X-NUM-GUESTS=3D0:mailto:laisondaniel@ccsaude.org.m=
+z
+ATTENDEE;CUTYPE=3DINDIVIDUAL;ROLE=3DREQ-PARTICIPANT;PARTSTAT=3DNEEDS-ACTION=
+;RSVP=3D
+ TRUE;CN=3D'Celso Varinde (CCS Central)';X-NUM-GUESTS=3D0:mailto:celsovarin=
+de@cc
+ saude.org.mz
+ATTENDEE;CUTYPE=3DINDIVIDUAL;ROLE=3DREQ-PARTICIPANT;PARTSTAT=3DNEEDS-ACTION=
+;RSVP=3D
+ TRUE;CN=3D'Agnaldo Samuel';X-NUM-GUESTS=3D0:mailto:agnaldosamuel@ccsaude.o=
+rg.mz
+ATTENDEE;CUTYPE=3DINDIVIDUAL;ROLE=3DREQ-PARTICIPANT;PARTSTAT=3DNEEDS-ACTION=
+;RSVP=3D
+ TRUE;CN=3Dmauriciotimecane@ccsaude.org.mz;X-NUM-GUESTS=3D0:mailto:mauricio=
+timec
+ ane@ccsaude.org.mz
+ATTENDEE;CUTYPE=3DINDIVIDUAL;ROLE=3DREQ-PARTICIPANT;PARTSTAT=3DNEEDS-ACTION=
+;RSVP=3D
+ TRUE;CN=3D"Antunes, Rui, Vodacom Mozambique";X-NUM-GUESTS=3D0:mailto:rui.a=
+ntune
+ s@vm.co.mz
+X-MICROSOFT-CDO-OWNERAPPTID:776196439
+CREATED:20210301T080325Z
+DESCRIPTION:Bom dia\, Dr. Laison.\n\nConforme conversado telefonicamente na
+  sexta-feira\, serve este para formalizar a hora do encontro a realizar ho= j  e por via do Team. Por favor\, aceite este encontro e para efeitos do enco= n  tro\, vide abaixo link:\n\nYou're invited to join a Microsoft Teams meetin= g
+ \n\nTitle: Solu=C3=A7=C3=B5es Tecnol=C3=B3gicas - Health\nTime: Mar 1\, 20=
+21 3:30:00 PM\n\
+ nJoin the meeting on your computer or mobile app\nhttps://teams.microsoft.= c  om/l/meetup-join/19%3ameeting_OTQ0YmQ4NTItODI2Yi00NzA4LWI3NDgtNDkwYWUxNTAw=
+Z
+ Dlk%40thread.v2/0?context=3D%7b%22Tid%22%3a%2231a5b62e-8d29-4e39-9fa2-a1c4=
+18c
+ 6e24c%22%2c%22Oid%22%3a%224781f4a4-3309-4402-ace9-912a7f3367d6%22%7d \n\n = \  n \nAbdul Neves | Chief Operating Officer \nAv. Kim Il Sung n=C2=BA 1180 |=
+ Tel:=20
+  + 258 82 303 0151 / +258 84 323 2151| Fixo: +258 21 491 785\nEmail: aneve= s  @salcapitais.co.mz  \n\n\n\n A informa=C3=A7=C3=A3o contida neste correio = electr=C3=B3nico
+  =C3=A9 confidencial e privilegiada\,\ndestinando-se unicamente =C3=A0 pes= soa ou enti  dade acima indicada.\nSe o leitor desta mensagem n=C3=A3o for o seu destin= at=C3=A1rio  \, fica pela presente\nnotificado de que qualquer divulga=C3=A7=C3=A3o\, d= istribui=C3=A7=C3=A3o
+  ou reprodu=C3=A7=C3=A3o do respectivo\nconte=C3=BAdo =C3=A9 expressa e es= tritamente proibida.\  n\nThe information contained in this e-mail is privileged and confidential=
+=20
+ and is intended\nonly for the use of the individual or entity named above.=
+=20
+ If the reader of this message\nis not the intended recipient\, you are her= e  by notified that any dissemination\, distribution\nor copying of this comm= u  nication is strictly prohibited.\n \n\n\nFrom: Laison Daniel <laisondaniel= @
+ ccsaude.org.mz>\nDate: Wednesday\, February 24\, 2021 at 14:54\nTo: <aneve= s
+ @salcapitais.co.mz>\nCc: <mauriciotimecane@ccsaude.org.mz>\, <sousaaugusto= @  ccsaude.org.mz>\, "'Celso Varinde (CCS Central)'" <celsovarinde@ccsaude.or= g  .mz>\, 'Agnaldo Samuel' <agnaldosamuel@ccsaude.org.mz>\nSubject: Pedido de=
+=20
+ encontro \n\nBoa tarde\, espero que este email lhe encontre de boa sa=C3= =BAde.\n  =C2=A0\nPropomos o encontro para segunda feira as 15h00=E2=80=A6via zoom. = Infelizmente e  sta dif=C3=ADcil marcar para sexta feira\, devido a disponibilidade do pes= soal q  ue deve participar. \n=C2=A0\n=C2=A0\n=C2=A0\nCumprimento \n=C2=A0\n\nLais= on Daniel\nDirector T
+ =C3=A9cnico\n=C2=A0\nPHONE: 82 5324601/84 4028148 =C2=A0FAX: +258 21 494 2= 12\nPostal Addre
+ ss: PO Box 4157\nPhysical Address: Rua Dami=C3=A3o de Gois N. 279\nMaputo-=  Mozam
+ bique\nEmail: mailto:laisondaniel@ccsaude.org.mz\nWebsite: http://www.ccsa= u  de.org.mz/\n=C2=A0\n\n\n-::~:~::~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:=
+~:~:~:
+ ~:~:~:~:~:~:~:~:~:~:~:~::~:~::-\nPlease do not edit this section of the de= s  cription.\n\nView your event at https://calendar.google.com/calendar/event=
+?
+ action=3DVIEW&eid=3DXzYwcTMwYzFnNjBvMzBlMWk2MG80YWMxZzYwcmo4Z3BsODhyajJjMW=
+g4NHM
+ zNGg5ZzYwczMwYzFnNjBvMzBjMWc4b3A0NGUyMTY4cWsyZHBoNjEyazhkcGc2NG8zMGMxZzYwb=
+z
+ MwYzFnNjBvMzBjMWc2MG8zMmMxZzYwbzMwYzFnNjhvazZjcTU2NHNrNGdwajZncWoyZzlrNmQx=
+N
+ DJjcG84NTM0Mmc5bDhwMWoyZTI1OGNxMCBhZ25hbGRvc2FtdWVsQGNjc2F1ZGUub3JnLm16&to=
+k
+ =3DMjEjYWJkdWwubmV2ZXNAZ21haWwuY29tY2E5NGU5ZTk0MmE5NzUyOGYyOWYzM2M3NDNmM2R=
+jNW
+ E4NDE3NjVjMw&ctz=3DAfrica%2FMaputo&hl=3Den_GB&es=3D1.\n-::~:~::~:~:~:~:~:~=
+:~:~:~:
+ ~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~::~:~::-
+LAST-MODIFIED:20210301T080325Z
+LOCATION:Team
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Marca=C3=A7=C3=A3o do Encontro --> Solu=C3=A7=C3=B5es Tecnol=C3=B3g= icas - Health TRANSP:OPAQUE BEGIN:VALARM ACTION:DISPLAY DESCRIPTION:This is an event reminder TRIGGER:-P0DT0H15M0S END:VALARM END:VEVENT END:VCALENDAR
+
+--00000000000071193305bc750df6--
+--00000000000071193405bc750df8
+Content-Type: application/ics; name="invite.ics"
+Content-Disposition: attachment; filename="invite.ics"
+Content-Transfer-Encoding: base64
+
+QkVHSU46VkNBTEVOREFSDQpQUk9ESUQ6LS8vR29vZ2xlIEluYy8vR29vZ2xlIENhbGVuZGFyIDcw
+LjkwNTQvL0VODQpWRVJTSU9OOjIuMA0KQ0FMU0NBTEU6R1JFR09SSUFODQpNRVRIT0Q6UkVRVUVT
+VA0KQkVHSU46VkVWRU5UDQpEVFNUQVJUOjIwMjEwMzAxVDEzMzAwMFoNCkRURU5EOjIwMjEwMzAx
+VDE0MzAwMFoNCkRUU1RBTVA6MjAyMTAzMDFUMDgwMzI2Wg0KT1JHQU5JWkVSO0NOPWFiZHVsLm5l
+dmVzQGdtYWlsLmNvbTptYWlsdG86YWJkdWwubmV2ZXNAZ21haWwuY29tDQpVSUQ6MDQwMDAwMDA4
+MjAwRTAwMDc0QzVCNzEwMUE4MkUwMDgwMDAwMDAwMEYyQjhBMjVBNzEwRUQ3MDEwMDAwMDAwMDAw
+MDAwMDANCiAwMTAwMDAwMDAyMUMzRTE5QkMzNDUxQTQzQkEzOEFGQUE1RkMxOEVDNA0KQVRURU5E
+RUU7Q1VUWVBFPUlORElWSURVQUw7Uk9MRT1SRVEtUEFSVElDSVBBTlQ7UEFSVFNUQVQ9TkVFRFMt
+QUNUSU9OO1JTVlA9DQogVFJVRTtDTj1zb3VzYWF1Z3VzdG9AY2NzYXVkZS5vcmcubXo7WC1OVU0t
+R1VFU1RTPTA6bWFpbHRvOnNvdXNhYXVndXN0b0BjY3NhDQogdWRlLm9yZy5teg0KQVRURU5ERUU7
+Q1VUWVBFPUlORElWSURVQUw7Uk9MRT1SRVEtUEFSVElDSVBBTlQ7UEFSVFNUQVQ9TkVFRFMtQUNU
+SU9OO1JTVlA9DQogVFJVRTtDTj0iQmFjYXIsIFRhZ3ksIFZvZGFjb20gTW96YW1iaXF1ZSI7WC1O
+VU0tR1VFU1RTPTA6bWFpbHRvOnRhZ3kuYmFjYXJADQogdm0uY28ubXoNCkFUVEVOREVFO0NVVFlQ
+RT1JTkRJVklEVUFMO1JPTEU9UkVRLVBBUlRJQ0lQQU5UO1BBUlRTVEFUPU5FRURTLUFDVElPTjtS
+U1ZQPQ0KIFRSVUU7Q049TGFpc29uIERhbmllbDtYLU5VTS1HVUVTVFM9MDptYWlsdG86bGFpc29u
+ZGFuaWVsQGNjc2F1ZGUub3JnLm16DQpBVFRFTkRFRTtDVVRZUEU9SU5ESVZJRFVBTDtST0xFPVJF
+US1QQVJUSUNJUEFOVDtQQVJUU1RBVD1ORUVEUy1BQ1RJT047UlNWUD0NCiBUUlVFO0NOPSdDZWxz
+byBWYXJpbmRlIChDQ1MgQ2VudHJhbCknO1gtTlVNLUdVRVNUUz0wOm1haWx0bzpjZWxzb3Zhcmlu
+ZGVAY2MNCiBzYXVkZS5vcmcubXoNCkFUVEVOREVFO0NVVFlQRT1JTkRJVklEVUFMO1JPTEU9UkVR
+LVBBUlRJQ0lQQU5UO1BBUlRTVEFUPU5FRURTLUFDVElPTjtSU1ZQPQ0KIFRSVUU7Q049J0FnbmFs
+ZG8gU2FtdWVsJztYLU5VTS1HVUVTVFM9MDptYWlsdG86YWduYWxkb3NhbXVlbEBjY3NhdWRlLm9y
+Zy5teg0KQVRURU5ERUU7Q1VUWVBFPUlORElWSURVQUw7Uk9MRT1SRVEtUEFSVElDSVBBTlQ7UEFS
+VFNUQVQ9TkVFRFMtQUNUSU9OO1JTVlA9DQogVFJVRTtDTj1tYXVyaWNpb3RpbWVjYW5lQGNjc2F1
+ZGUub3JnLm16O1gtTlVNLUdVRVNUUz0wOm1haWx0bzptYXVyaWNpb3RpbWVjDQogYW5lQGNjc2F1
+ZGUub3JnLm16DQpBVFRFTkRFRTtDVVRZUEU9SU5ESVZJRFVBTDtST0xFPVJFUS1QQVJUSUNJUEFO
+VDtQQVJUU1RBVD1ORUVEUy1BQ1RJT047UlNWUD0NCiBUUlVFO0NOPSJBbnR1bmVzLCBSdWksIFZv
+ZGFjb20gTW96YW1iaXF1ZSI7WC1OVU0tR1VFU1RTPTA6bWFpbHRvOnJ1aS5hbnR1bmUNCiBzQHZt
+LmNvLm16DQpYLU1JQ1JPU09GVC1DRE8tT1dORVJBUFBUSUQ6Nzc2MTk2NDM5DQpDUkVBVEVEOjIw
+MjEwMzAxVDA4MDMyNVoNCkRFU0NSSVBUSU9OOkJvbSBkaWFcLCBEci4gTGFpc29uLlxuXG5Db25m
+b3JtZSBjb252ZXJzYWRvIHRlbGVmb25pY2FtZW50ZSBuYQ0KICBzZXh0YS1mZWlyYVwsIHNlcnZl
+IGVzdGUgcGFyYSBmb3JtYWxpemFyIGEgaG9yYSBkbyBlbmNvbnRybyBhIHJlYWxpemFyIGhvag0K
+IGUgcG9yIHZpYSBkbyBUZWFtLiBQb3IgZmF2b3JcLCBhY2VpdGUgZXN0ZSBlbmNvbnRybyBlIHBh
+cmEgZWZlaXRvcyBkbyBlbmNvbg0KIHRyb1wsIHZpZGUgYWJhaXhvIGxpbms6XG5cbllvdSdyZSBp
+bnZpdGVkIHRvIGpvaW4gYSBNaWNyb3NvZnQgVGVhbXMgbWVldGluZw0KIFxuXG5UaXRsZTogU29s
+dcOnw7VlcyBUZWNub2zDs2dpY2FzIC0gSGVhbHRoXG5UaW1lOiBNYXIgMVwsIDIwMjEgMzozMDow
+MCBQTVxuXA0KIG5Kb2luIHRoZSBtZWV0aW5nIG9uIHlvdXIgY29tcHV0ZXIgb3IgbW9iaWxlIGFw
+cFxuaHR0cHM6Ly90ZWFtcy5taWNyb3NvZnQuYw0KIG9tL2wvbWVldHVwLWpvaW4vMTklM2FtZWV0
+aW5nX09UUTBZbVE0TlRJdE9ESTJZaTAwTnpBNExXSTNORGd0TkRrd1lXVXhOVEF3Wg0KIERsayU0
+MHRocmVhZC52Mi8wP2NvbnRleHQ9JTdiJTIyVGlkJTIyJTNhJTIyMzFhNWI2MmUtOGQyOS00ZTM5
+LTlmYTItYTFjNDE4Yw0KIDZlMjRjJTIyJTJjJTIyT2lkJTIyJTNhJTIyNDc4MWY0YTQtMzMwOS00
+NDAyLWFjZTktOTEyYTdmMzM2N2Q2JTIyJTdkIFxuXG4gXA0KIG4gXG5BYmR1bCBOZXZlcyB8IENo
+aWVmIE9wZXJhdGluZyBPZmZpY2VyIFxuQXYuIEtpbSBJbCBTdW5nIG7CuiAxMTgwIHwgVGVsOiAN
+CiAgKyAyNTggODIgMzAzIDAxNTEgLyArMjU4IDg0IDMyMyAyMTUxfCBGaXhvOiArMjU4IDIxIDQ5
+MSA3ODVcbkVtYWlsOiBhbmV2ZXMNCiBAc2FsY2FwaXRhaXMuY28ubXogIFxuXG5cblxuIEEgaW5m
+b3JtYcOnw6NvIGNvbnRpZGEgbmVzdGUgY29ycmVpbyBlbGVjdHLDs25pY28NCiAgw6kgY29uZmlk
+ZW5jaWFsIGUgcHJpdmlsZWdpYWRhXCxcbmRlc3RpbmFuZG8tc2UgdW5pY2FtZW50ZSDDoCBwZXNz
+b2Egb3UgZW50aQ0KIGRhZGUgYWNpbWEgaW5kaWNhZGEuXG5TZSBvIGxlaXRvciBkZXN0YSBtZW5z
+YWdlbSBuw6NvIGZvciBvIHNldSBkZXN0aW5hdMOhcmlvDQogXCwgZmljYSBwZWxhIHByZXNlbnRl
+XG5ub3RpZmljYWRvIGRlIHF1ZSBxdWFscXVlciBkaXZ1bGdhw6fDo29cLCBkaXN0cmlidWnDp8Oj
+bw0KICBvdSByZXByb2R1w6fDo28gZG8gcmVzcGVjdGl2b1xuY29udGXDumRvIMOpIGV4cHJlc3Nh
+IGUgZXN0cml0YW1lbnRlIHByb2liaWRhLlwNCiBuXG5UaGUgaW5mb3JtYXRpb24gY29udGFpbmVk
+IGluIHRoaXMgZS1tYWlsIGlzIHByaXZpbGVnZWQgYW5kIGNvbmZpZGVudGlhbCANCiBhbmQgaXMg
+aW50ZW5kZWRcbm9ubHkgZm9yIHRoZSB1c2Ugb2YgdGhlIGluZGl2aWR1YWwgb3IgZW50aXR5IG5h
+bWVkIGFib3ZlLiANCiBJZiB0aGUgcmVhZGVyIG9mIHRoaXMgbWVzc2FnZVxuaXMgbm90IHRoZSBp
+bnRlbmRlZCByZWNpcGllbnRcLCB5b3UgYXJlIGhlcmUNCiBieSBub3RpZmllZCB0aGF0IGFueSBk
+aXNzZW1pbmF0aW9uXCwgZGlzdHJpYnV0aW9uXG5vciBjb3B5aW5nIG9mIHRoaXMgY29tbXUNCiBu
+aWNhdGlvbiBpcyBzdHJpY3RseSBwcm9oaWJpdGVkLlxuIFxuXG5cbkZyb206IExhaXNvbiBEYW5p
+ZWwgPGxhaXNvbmRhbmllbEANCiBjY3NhdWRlLm9yZy5tej5cbkRhdGU6IFdlZG5lc2RheVwsIEZl
+YnJ1YXJ5IDI0XCwgMjAyMSBhdCAxNDo1NFxuVG86IDxhbmV2ZXMNCiBAc2FsY2FwaXRhaXMuY28u
+bXo+XG5DYzogPG1hdXJpY2lvdGltZWNhbmVAY2NzYXVkZS5vcmcubXo+XCwgPHNvdXNhYXVn
+bXo+XG5DYzogPG1hdXJpY2lvdGltZWNhbmVAY2NzYXVkZS5vcmcubXo+dXN0
+b0ANCiBjY3NhdWRlLm9yZy5tej5cLCAiJ0NlbHNvIFZhcmluZGUgKENDUyBDZW50cmFsKSciIDxj
+ZWxzb3ZhcmluZGVAY2NzYXVkZS5vcmcNCiAubXo+XCwgJ0FnbmFsZG8gU2FtdWVsJyA8YWdu
+ZWxzb3ZhcmluZGVAY2NzYXVkZS5vcmcNCiAubXo+YWxk
+b3NhbXVlbEBjY3NhdWRlLm9yZy5tej5cblN1YmplY3Q6IFBlZGlkbyBkZSANCiBlbmNvbnRybyBc
+blxuQm9hIHRhcmRlXCwgZXNwZXJvIHF1ZSBlc3RlIGVtYWlsIGxoZSBlbmNvbnRyZSBkZSBib2Eg
+c2HDumRlLlxuDQogwqBcblByb3BvbW9zIG8gZW5jb250cm8gcGFyYSBzZWd1bmRhIGZlaXJhIGFz
+IDE1aDAw4oCmdmlhIHpvb20uIEluZmVsaXptZW50ZSBlDQogc3RhIGRpZsOtY2lsIG1hcmNhciBw
+YXJhIHNleHRhIGZlaXJhXCwgZGV2aWRvIGEgZGlzcG9uaWJpbGlkYWRlIGRvIHBlc3NvYWwgcQ0K
+IHVlIGRldmUgcGFydGljaXBhci4gXG7CoFxuwqBcbsKgXG5DdW1wcmltZW50byBcbsKgXG5cbkxh
+aXNvbiBEYW5pZWxcbkRpcmVjdG9yIFQNCiDDqWNuaWNvXG7CoFxuUEhPTkU6IDgyIDUzMjQ2MDEv
+ODQgNDAyODE0OCDCoEZBWDogKzI1OCAyMSA0OTQgMjEyXG5Qb3N0YWwgQWRkcmUNCiBzczogUE8g
+Qm94IDQxNTdcblBoeXNpY2FsIEFkZHJlc3M6IFJ1YSBEYW1pw6NvIGRlIEdvaXMgTi4gMjc5XG5N
+YXB1dG8tIE1vemFtDQogYmlxdWVcbkVtYWlsOiBtYWlsdG86bGFpc29uZGFuaWVsQGNjc2F1ZGUu
+b3JnLm16XG5XZWJzaXRlOiBodHRwOi8vd3d3LmNjc2F1DQogZGUub3JnLm16L1xuwqBcblxuXG4t
+Ojp+On46On46fjp+On46fjp+On46fjp+On46fjp+On46fjp+On46fjp+On46fjp+On46fjp+Og0K
+IH46fjp+On46fjp+On46fjp+On46fjp+Ojp+On46Oi1cblBsZWFzZSBkbyBub3QgZWRpdCB0
+IH46fjp+On46fjp+On46fjp+On46fjp+Ojp+aGlz
+IHNlY3Rpb24gb2YgdGhlIGRlcw0KIGNyaXB0aW9uLlxuXG5WaWV3IHlvdXIgZXZlbnQgYXQgaHR0
+cHM6Ly9jYWxlbmRhci5nb29nbGUuY29tL2NhbGVuZGFyL2V2ZW50Pw0KIGFjdGlvbj1WSUVXJmVp
+ZD1Yell3Y1RNd1l6Rm5OakJ2TXpCbE1XazJNRzgwWVdNeFp6WXdjbW80WjNCc09EaHlhakpqTVdn
+NE5ITQ0KIHpOR2c1WnpZd2N6TXdZekZuTmpCdk16QmpNV2M0YjNBME5HVXlNVFk0Y1dzeVpIQm9O
+akV5YXpoa2NHYzJORzh6TUdNeFp6WXdieg0KIE13WXpGbk5qQnZNekJqTVdjMk1HOHpNbU14WnpZ
+d2J6TXdZekZuTmpodmF6WmpjVFUyTkhOck5HZHdhalpuY1dveVp6bHJObVF4Tg0KIERKamNHODRO
+VE0wTW1jNWJEaHdNV295WlRJMU9HTnhNQ0JoWjI1aGJHUnZjMkZ0ZFdWc1FHTmpjMkYxWkdVdWIz
+Sm5MbTE2JnRvaw0KID1NakVqWVdKa2RXd3VibVYyWlhOQVoyMWhhV3d1WTI5dFkyRTVOR1U1WlRr
+ME1tRTVOelV5T0dZeU9XWXpNMk0zTkRObU0yUmpOVw0KIEU0TkRFM05qVmpNdyZjdHo9QWZyaWNh
+JTJGTWFwdXRvJmhsPWVuX0dCJmVzPTEuXG4tOjp+On46On46fjp+On46fjp+On46fjp+Og0K
+JTJGTWFwdXRvJmhsPWVuX0dCJmVzPTEuXG4tOjp+On46On46fjp+On46fjp+On46fjp+IH46
+fjp+On46fjp+On46fjp+On46fjp+On46fjp+On46fjp+On46fjp+On46fjp+On46fjp+Ojp+On46
+Oi0NCkxBU1QtTU9ESUZJRUQ6MjAyMTAzMDFUMDgwMzI1Wg0KTE9DQVRJT046VGVhbQ0KU0VRVUVO
+Q0U6MA0KU1RBVFVTOkNPTkZJUk1FRA0KU1VNTUFSWTpNYXJjYcOnw6NvIGRvIEVuY29udHJvIC0t
+PiBTb2x1w6fDtWVzIFRlY25vbMOzZ2ljYXMgLSBIZWFsdGgNClRSQU5TUDpPUEFRVUUNCkJFR0lO
+OlZBTEFSTQ0KQUNUSU9OOkRJU1BMQVkNCkRFU0NSSVBUSU9OOlRoaXMgaXMgYW4gZXZlbnQgcmVt
+aW5kZXINClRSSUdHRVI6LVAwRFQwSDE1TTBTDQpFTkQ6VkFMQVJNDQpFTkQ6VkVWRU5UDQpFTkQ6
+VkNBTEVOREFSDQo=
+--00000000000071193405bc750df8--
